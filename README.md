@@ -30,7 +30,7 @@ For the last question, in order to determing the most frequently used protocol, 
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/83295dfb-b493-4c7d-b08a-f838a0a186ca)
 which vlearly shows us that `ICMP` was the most frequently used protocol.
 
-## Hydra is Coming to Town
+## 3. Hydra is Coming to Town
 
 In this challenge, we are required to bruteforce the password of the server door, which is 3 characters long and only contains only the hexadecimal characters '0-9' and 'A to F'.
 In order to do so, we first use a tool called crunch which is used to store all the password combinations in a text file, here, `3digits.txt`
