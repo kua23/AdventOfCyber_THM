@@ -85,6 +85,22 @@ Similarly we write another command,
 Here, the only change that it is not required to spider into any other website.
 Also, the username is only in lowercase.
 
+Moving on, it is time to bruteforce the portal with the set of usernames and passwords using a tool called **wfuzz** which is basically used to bruteforce based on a given set of parameters.
+
+Thus we use the following command, in order to bruteforce /login.php
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/09a61e0e-1240-4da3-adbb-eb98ae77b980)
+
+`-z file,usernames.txt` loads the set of usernames, while `-z file,passwords.txt` loads the set of passwords.
+
+--hs "Please enter the correct credentials" hides responses containing the string "Please enter the correct credentials", which is the message displayed for wrong login attempts.
+-u specifies the target URL.
+-d "username=FUZZ&password=FUZ2Z" provides the POST data format where FUZZ will be replaced by usernames and FUZ2Z by passwords.
+Note: The output above contains the word REDACTED since it contains the correct combination of username and password.
+
+
+
+
 
 
 
