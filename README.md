@@ -42,8 +42,6 @@ Upon inspecting the page source, ![image](https://github.com/kua23/AdventOfCyber
 we get the method as `post`. The URL is `http://10.10.137.208:8000/pin.php`. The PIN code is sent with the value `name`.
 Thus, utilizing these crucial points of information, we can bruteforce the password.
 
-6F5
-
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/6ede70d3-6b12-4655-9e20-33fbe04fb76f)
 Thus using the hydra command with
 -l '' indicating  that the login name is blank
@@ -62,6 +60,36 @@ Thus, by running this command we can bruteforce the password which looks like th
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/a0f5217d-a7e7-46e0-a722-2a666b032f8b)
 
 Thus, the password is 6F5, which gives us the flag, `THM{pin-code-brute-force}`
+
+## 4. Baby, it's CeWLd outside
+
+In this, we are given a task to bruteforce a login username and a password for the AntarctiCrafts Website, http://10.10.129.167/.
+We are given a tool called CeWL(Custom Word List generator) which generates a list of words based on the website and uses them to bruteforce the username and the password credentials. 
+It spiders its way through the website's content to retrieve the structure of the site and other components.
+
+We first use the command, to generate a word list for the site and store it in a text file:
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/83617fc9-d519-4968-96f2-e516a4de5005)
+where `-w` is used to store the output in the text file.
+
+However, CeWL itself provides us a list of parameters to work with. 
+Thus in order to get a more specific list of words, we can utilize these parameters and store the output as passwords.txt:
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/5c34b544-b55a-4c49-b527-192599255028)
+
+Thus, in this command `-d` provides how deep CeWL should spider into the website, thus in this case it spiders two links deep.
+`-m` shows the minimum word limit that is 5 characters.
+`--extension` appends numbers to words.
+
+Thus, now after obtaining the passwords.txt, it is time to create a usernames.txt too.
+Similarly we write another command,
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/2fda0932-9279-4d2c-b172-d09c60a2597e)
+Here, the only change that it is not required to spider into any other website.
+Also, the username is only in lowercase.
+
+
+
+
+
+
 
 
 
