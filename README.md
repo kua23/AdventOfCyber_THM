@@ -112,6 +112,25 @@ Thus upon entering the username and password, we get into the website, in which 
 ### Flag
 `THM{m3rrY4nt4rct1crAft$}`
 
+##  A Christmas DOScovery: Tapes of Yule-tide Past
+
+In this challenge, we need to restore a file `AC2023.BAK` from the Disk Operating System. The file is located in C:\TOOLS\BACKUP directory of the DOS. In order to access it, we can use the following commands:
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/3580d966-fa27-4b3a-8e2a-665e14e55ba5)
+First, we use the `dir` command in order to see the directory and the files in the DOS. We can then navigate to the BACKUP directory using,
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/ccf37119-8dee-4fa5-bae5-ce7140317853)
+Thus, we have reached the required directory. We need to run the command `BUMASTER.EXE C:\AC2023.BAK` in order to get the file, however, the file seems to be corrupted.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/7ffa8f3a-6971-448a-867b-e040e392ce36)
+
+Upon running `edit README.TXT`, to troubleshoot the problem,
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/434796a5-01ba-4acc-9fdb-aa88a00192b4)
+We, therefore, need to alter the hexdump file's first 2 digits in order to be able to run the program.
+
+
+
+
+
 
 
 
