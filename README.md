@@ -32,6 +32,31 @@ which vlearly shows us that `ICMP` was the most frequently used protocol.
 
 ## Hydra is Coming to Town
 
+In this challenge, we are required to bruteforce the password of the server door, which is 3 characters long and only contains only the hexadecimal characters '0-9' and 'A to F'.
+In order to do so, we first use a tool called crunch which is used to store all the password combinations in a text file, here, `3digits.txt`
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/3f078559-28b4-4ac3-8b61-268451a01f61)
+
+Then, in order to bruteforce the password, we need to take every password combination and check it with the security door, until it lets us inside. 
+For this, we use another tool called hydra. In order to determine the parameters for the hydra command, we need to inspect the page source of the website.
+Upon inspecting the page source, ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/63c9885a-9c01-481b-85c7-9071ee660ce0)
+we get the method as `post`. The URL is `http://10.10.137.208:8000/pin.php`. The PIN code is sent with the value `name`.
+Thus, utilizing these crucial points of information, we can bruteforce the password.
+
+6F5
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/6ede70d3-6b12-4655-9e20-33fbe04fb76f)
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/a0f5217d-a7e7-46e0-a722-2a666b032f8b)
+
+
+
+
+
+
+
+
+
+
 
 
 
