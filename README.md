@@ -45,8 +45,25 @@ Thus, utilizing these crucial points of information, we can bruteforce the passw
 6F5
 
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/6ede70d3-6b12-4655-9e20-33fbe04fb76f)
+Thus using the hydra command with
+-l '' indicating  that the login name is blank
+-P 3digits.txt specifying the password file to use
+-f stops Hydra after finding the password
+-v provides verbose output and is ussed to find errors
+ is the IP address of the target
+http-post-form specifies the HTTP method to use
+"/login.php:pin=^PASS^:Access denied" has three parts separated by :
+/login.php is the page where the PIN code is submitted
+pin=^PASS^ will replace ^PASS^ with values from the password list.
+Access denied indicates that invalid passwords will lead to a page that contains the text “Access denied”
+-s 8000 indicates the port number on the target
 
+Thus, by running this command we can bruteforce the password which looks like the below picture. 
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/a0f5217d-a7e7-46e0-a722-2a666b032f8b)
+
+Thus, the password is 6F5, which gives us the flag, `THM{pin-code-brute-force}`
+
+
 
 
 
