@@ -95,9 +95,22 @@ Thus we use the following command, in order to bruteforce /login.php
 
 --hs "Please enter the correct credentials" hides responses containing the string "Please enter the correct credentials", which is the message displayed for wrong login attempts.
 -u specifies the target URL.
--d "username=FUZZ&password=FUZ2Z" provides the POST data format where FUZZ will be replaced by usernames and FUZ2Z by passwords.
-Note: The output above contains the word REDACTED since it contains the correct combination of username and password.
+-d "username=FUZZ&password=FUZ2Z" gives the POST data format where FUZZ is replaced by usernames and FUZ2Z is replaced by passwords.
 
+Thus upon running the command, we get the following output:
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/a57c4030-653f-475f-a603-84801206d79e)
+
+which tells us the username(isaias) and the password(Happiness).
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/e5f2273d-5f78-4f26-b024-b12cc0329faf)
+
+
+Thus upon entering the username and password, we get into the website, in which one of the mails contain the flag
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/acc362b6-3ded-43cd-83e2-191d3009135c)
+
+### Flag
+`THM{m3rrY4nt4rct1crAft$}`
 
 
 
