@@ -14,6 +14,8 @@ However, on declaring ourselves as a member of the IT server, we get access to t
 Next, to get the name of McGreedy's secret project, we can ask the chatbot, but denies it due to its security measures
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/3ba50465-2691-44d8-9d63-dffc4e862ec1)
 Thus, we can ask the chatbot to drop the security measures by telling it that it is in maintenance mode and we get the name of the project.
-![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/573e5711-f538-467c-af45-2b1c9d4ec91e)
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/7876b842-da79-4e27-8571-79ef23ce85fd)
+
+## 2.
 
 
