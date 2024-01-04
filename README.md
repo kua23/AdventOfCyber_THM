@@ -112,7 +112,7 @@ Thus upon entering the username and password, we get into the website, in which 
 ### Flag
 `THM{m3rrY4nt4rct1crAft$}`
 
-##  A Christmas DOScovery: Tapes of Yule-tide Past
+## 5. A Christmas DOScovery: Tapes of Yule-tide Past
 
 In this challenge, we need to restore a file `AC2023.BAK` from the Disk Operating System. The file is located in C:\TOOLS\BACKUP directory of the DOS. In order to access it, we can use the following commands:
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/3580d966-fa27-4b3a-8e2a-665e14e55ba5)
@@ -147,7 +147,47 @@ Now, we just need to run the command: BUMASTER.EXE C:\AC2023.BAK, which gives us
 ### Flag
 THM{0LD_5CH00L_C00L_d00D}
 
-## Memories of Christmas Past
+## 6. Memories of Christmas Past
+
+This is a challenge based on buffer overflow. Thus, we are given a game in which we need to buy a star for the christmas tree. However, in order to buy the star we need 10000 coins, which is nearly impossible to get considering the fact that only one coin is received upon speaking to the computer in the game.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/a567f279-645b-40cd-99a3-27cec583c5c0)
+
+However, in the problem statement, they provide a hint saying that if we change our name to 'ScroogeRocks', we get additional coins. This is only possible because of a buffer overflow. As we can see in the debug menu
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/38c4af81-a73c-4ebf-9e6e-6e7b304743f1), the memory space for our player name is only upto 12 characters. However, when we change our name to one which has more than 12 characters, the data stored overflows into the next memory space which is in fact used to store the value of the coins collected. Thus, as the data is stored in hexadecimal notation, the number of coins increases.
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/a905c14b-00bf-45f3-9993-5763f15bab9f)
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/bcfc73b0-399e-4e39-914c-cb823849f6da)
+In order to answer the first question, we first convert the given values from hexadecimal to ASCII. 
+Here, 4f is equal to the letter 'O', 50 gives the letter 'P' and 53 gives the letter 'S'.
+
+Thus, if we change our name to `AAAABBBBCCCCOOPS`, then the number of coins would be `1397772111`
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/a6de2d68-85ff-4029-88da-4aa6f441ce60)
+
+
+
+Thus, if we provide a large enough name, we can easily obtain the 100000 dollars in order to decorate the christmas tree instead of clicking on the computer 10000 times which is tedious and honestly stupid.
+Then, using the obtained coins we can buy the star. However, when we try to buy the star from the mouse, it refuses to give it to us, but instead gives us an item of an ID `e` instead of ID 'd'.
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/6326d62e-5218-4945-9476-3602e0346176)
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/cbdb30d6-c88d-4ab6-b5c2-1b23cac9f3dc)
+However, after we get the item, in the inventory space we can see that an item with the ID `e` has appeared. Thus in order to get the star, if we change our name to one that is 46 letters long, with the last two letters ending with d, we can obtain the star.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f92aa9e9-ff1c-4e17-b541-e6b146fef336)
+Then upon speaking with the tree, we get the flag.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/80f9dd6d-55ba-477a-a79f-45116db2293a)
+
+### Flag 
+THM{mchoneybell_is_the_real_star}
+
+## ‘Tis the season for log chopping!
+
+
+
+
+
+
 
 
 
