@@ -147,6 +147,10 @@ Now, we just need to run the command: BUMASTER.EXE C:\AC2023.BAK, which gives us
 ### Flag
 THM{0LD_5CH00L_C00L_d00D}
 
+## Memories of Christmas Past
+
+
+
 
 
 
