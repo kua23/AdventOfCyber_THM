@@ -116,6 +116,7 @@ Thus upon entering the username and password, we get into the website, in which 
 
 In this challenge, we need to restore a file `AC2023.BAK` from the Disk Operating System. The file is located in C:\TOOLS\BACKUP directory of the DOS. In order to access it, we can use the following commands:
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/3580d966-fa27-4b3a-8e2a-665e14e55ba5)
+Here, we can also answer the question to how large the AC2023 file is which is `12,704` bytes
 First, we use the `dir` command in order to see the directory and the files in the DOS. We can then navigate to the BACKUP directory using,
 
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/ccf37119-8dee-4fa5-bae5-ce7140317853)
@@ -125,7 +126,32 @@ Thus, we have reached the required directory. We need to run the command `BUMAST
 
 Upon running `edit README.TXT`, to troubleshoot the problem,
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/434796a5-01ba-4acc-9fdb-aa88a00192b4)
-We, therefore, need to alter the hexdump file's first 2 digits in order to be able to run the program.
+We, therefore, need to alter the file's first 2 digits in order to be able to run the program. We also need to note that the first 2 digits must be of ASCII type.
+
+Also, we can use the README.TXT, to determine the name of the program which is `BackupMaster3000`.
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/fbece4ca-c033-488f-9fce-dfff181fca36)
+
+Upon running the command `EDIT C:\AC2023.BAK`, we get the following text editor.
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/537a6ae8-7939-43f2-a623-83eb5571afba). 
+
+The challenge itself tells us that the magic bytes in hex format is '41 43'. We need to convert this to ASCII,
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/8220eea8-26d3-4cf0-a4db-392a92a06713)
+
+Thus, AC has to be appended to the start of the text file, 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/30e17a5a-b1f6-4f2f-ac6d-de6625c38cfe)
+
+Now, we just need to run the command: BUMASTER.EXE C:\AC2023.BAK, which gives us the flag.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/46c4d18e-c614-45b8-8605-ff3dcd0f1faa)
+
+### Flag
+THM{0LD_5CH00L_C00L_d00D}
+
+
+
+
+
+
 
 
 
