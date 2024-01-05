@@ -181,7 +181,69 @@ Then upon speaking with the tree, we get the flag.
 ### Flag 
 THM{mchoneybell_is_the_real_star}
 
-## ‘Tis the season for log chopping!
+## 7. ‘Tis the season for log chopping!
+
+So, this is an interesting one. Here, we are given a set of log data and are given the task to determine and find out the malicious log data and retrieve it. We are also provided with additional small tasks in order to improve linux skills.
+
+For the first question,
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/68cfdcda-b7d9-49ea-ad7d-003dbac71436)
+
+In order to figure this out, we can just use
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/d3fa7404-a9fb-4ebd-9218-c967f718d339)
+
+Thus, in this code,
+`cut -d ' ' -f2 access.log | sort | uniq | nl`
+`cut` is used to segregate the logs into different parts 
+`-d ' '` is used to separate the logs based on the delimiter which in this case is ' '
+`-f2` is used to tell the computer to just cut the string after the 2nd space as ' ' is the delimiter
+`|` pipes the output of that part into the `sort` command
+`sort` is used to sort the logs alphabetically
+`uniq` is used to remove identical logs 
+`nl` is used to count the number of lines
+
+Then the answer returned is,
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f7f48a57-d1ae-460b-9fae-1636da73b2a9)
+
+
+Thus, the answer for this question is `9`
+
+For the next question, ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/40825d7e-ddfd-473a-89d7-566e1b95481c)
+
+we use the code,
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f4c34466-610a-4590-88dd-a336f8940e41)
+
+`cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq | nl`
+which is almost the same as the previous code, except the fact that the first commands ouput, that is the domain and log part, is piped into the second command which is further cut due to there being a delimiter for ':'. This is done to further segment the log, so that only the domain name remains and the port is removed. This is then sorted, and filtered to finally get the answer which is `111`
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/da0406b2-0832-4675-b569-be949c4940f5)
+
+For the next question, 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/d8db57f3-1da8-4359-9c88-aa327472d7a9)
+we can use,
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/9efd5d26-4d21-48e8-ab2c-d55596e23882)
+`cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort | tail `
+This basically first segments the logs such that only the website and port remains and then further segments it such that only the website remains. Then it sorts it and reqmoves duplicate log entries where `-c` gives a count of each entry. The next `sort` sorts the count in ascending order while the `tail ` command then displays the 10 most frequently visited websites.
+
+Thus, upon noticing the most frequently visited websites, 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/6ca4c78c-493c-4b06-ae14-aa609d31d896)
+`frostlings.bigbadstash.thm` sure does stand out.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
