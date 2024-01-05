@@ -316,7 +316,9 @@ to verify the disk image, which then gives us the SHA1 hash
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/bf168abd-0f08-4663-b191-af3a18d8fec8)
 whose answer is `39f2dea6ffb43bf80d80f19d122076b3682773c2`
 
-## 
+## 9. She sells C# shells by the C2shore
+
+
 
 
 
