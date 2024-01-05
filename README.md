@@ -219,6 +219,21 @@ which is almost the same as the previous code, except the fact that the first co
 
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/da0406b2-0832-4675-b569-be949c4940f5)
 
+
+For the next question,
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f5c3ae44-5027-4795-b912-d07c53bd20a5)
+something went wrong or I did not understand the question properly maybe. But the answer I finally got was correct.
+
+Upon using this command `cut -d ' ' -f3,6 access.log| sort | uniq -c | sort | head`
+This command gives the number of times the domain has been accessed the least
+we got the status code for the second least accessed domain, not the first but it was fine.
+
+Thus the answer is `503`
+
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/87610de7-b677-4067-afb3-8e0872a3f75a)
+
+
 For the next question, 
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/d8db57f3-1da8-4359-9c88-aa327472d7a9)
 we can use,
