@@ -293,6 +293,38 @@ we need to first navigate to the `DO_NOT_OPEN` deleted folder, navigate to `secr
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/222d3d71-eae8-4b91-87fc-8ab44c7f8130)
 
 
+For the next question, in the same `DO_NOT_OPEN` folder, we need to navigate to `JuicyTomaTOY.zip` and export the files.
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/dff21d10-892e-448e-8d24-6040c73acf7e)
+
+Then, upon going to the folder where the file is exported and then clicking on it, we realize that it contains a secret file named `JuicyTomaTOY.exe`
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/217f68fb-417f-4044-a865-ab479dc3433c)
+
+For the next question, coming back to the ROOT file, to find the flag, we just need to check the hexdump file of the two deleted .png files, namely 'portrait.png' and 'wallpaper.png'. 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f87151a2-e532-42fe-92c0-f88417adaca5)
+
+In the hexdump of 'portrait.png' on running the FIND tool and searching for `thm{`, we get the hidden flag
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/33f02b8f-93ab-49d6-b66a-c1f94e92c01a)
+that is, `THM{byt3-L3vel_@n4Lys15}`
+
+For the last question,
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/ffae465d-aad4-439c-bfb6-c230864d6387)
+
+We need to navigate to
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/73aef688-6b36-4a72-9bae-2a78317ae95b)
+to verify the disk image, which then gives us the SHA1 hash
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/bf168abd-0f08-4663-b191-af3a18d8fec8)
+whose answer is `39f2dea6ffb43bf80d80f19d122076b3682773c2`
+
+## 
+
+
+
+
+
+
+
+
 
 
 
