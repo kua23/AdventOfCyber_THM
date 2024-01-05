@@ -230,6 +230,31 @@ Thus, upon noticing the most frequently visited websites,
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/6ca4c78c-493c-4b06-ae14-aa609d31d896)
 `frostlings.bigbadstash.thm` sure does stand out.
 
+For the next question, 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f20aed38-307e-4fbe-b57e-d3dff7cccf07)
+we cna use the following command:
+
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/18e9806c-4d9b-4a8d-8f0f-39a42e4689fa)
+
+`cut -d ' ' -f2,3 access.log | grep 'frostlings.bigbadstash.thm' | uniq`
+This first segements the log such that only the IP address and the domain is visible and pipes it into the `grep` command which only filters those log entries which contain `frostlings.bigbadstash.thm`, then we remove the duplicate entries, to get the IP address.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/00ffdf97-d2b1-4379-b3ef-5a069e726f00)
+Thus, the answer is `10.10.185.225`
+
+The next question is basically the same previous question
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f4ac163f-ccaa-4889-a8ca-9d378315af85)
+expect we use `uniq -c ` to count the number of times the domain has been accessed.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f1587d4c-b583-4d4f-837d-a3ff39cb0842)
+Thus, the answer is `1581`
+
+
+
+
+
+
 
 
 
