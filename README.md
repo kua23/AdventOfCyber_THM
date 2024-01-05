@@ -250,6 +250,26 @@ expect we use `uniq -c ` to count the number of times the domain has been access
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/f1587d4c-b583-4d4f-837d-a3ff39cb0842)
 Thus, the answer is `1581`
 
+For the last answer, we  need to finally get the flag.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/ca6c2b90-3c50-429c-b8e2-0ddfaf33536d)
+
+When we run this command, `grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f5 | head  `
+we are basically telling the system to return the http url for all the logs which contain 'frostlings.bigbadstash.thm' and only show the last part of it.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/93b00493-ccb5-4af5-8987-a7e22fe0978a)
+The goodies part shows us that the data is mostly encoded and it does look like it is base64 encoded. So in order to decode this, we use 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/db29ec51-a6ae-4fd3-b5cf-6c1307063adb)
+
+in which one of the log entries contains the flag.
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/1a56490e-2157-42fa-a599-a5b495ec840b)
+
+Thus, the flag is `THM{a_gift_for_you_awesome_analyst!}`
+
+
+
+
+
 
 
 
