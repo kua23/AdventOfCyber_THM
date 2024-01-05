@@ -281,6 +281,20 @@ in which one of the log entries contains the flag.
 
 Thus, the flag is `THM{a_gift_for_you_awesome_analyst!}`
 
+## 8.  Have a Holly, Jolly Byte!
+
+In this challenge, we are using a software called FTK Imager to obtain information and history about evidence and analyse it.
+
+For the first question, that is
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/dbd3cba7-06a9-4aac-a596-7354313d7147)
+
+we need to first navigate to the `DO_NOT_OPEN` deleted folder, navigate to `secretchat.txt`, right-click it and export the files into a folder. Then navigating to the file, we get the answer. Thus, the answer is `mcgreedysecretc2.thm.`
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/222d3d71-eae8-4b91-87fc-8ab44c7f8130)
+
+
+
+
 
 
 
