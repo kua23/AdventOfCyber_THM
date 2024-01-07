@@ -332,6 +332,27 @@ Thus coming to the questions, for the first one
  For the next question,
 
  ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/4ec2348b-4fc4-4651-9180-c9544b8e1b30)
+
+ This is very simple. The method used to submit the command execution output is `POST` after getting the instructions through the GETIT function.
+
+ For the third question,
+
+ ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/48f479a7-c8d8-44b9-bdde-43fc40d22eec)
+
+If we go into the Encryptor or the Decryptor function, we can see the key, which is assigned to the variable 'bytes'.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/d03ba348-43e4-4fe1-b19d-1c8b72f2f26f)
+Thus, the answer is `youcanthackthissupersecurec2keys`
+
+To answer the next question, 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/458080e3-32c3-4100-b019-f3d30cc5a604)
+we just need to go to the main Program, and we can find the first URL used by the malware, which is given by `string url = str + "/reg";`
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/e28da78b-87be-4be9-ac36-e4622a84e2c5)
+
+Thus, the first URL is `http://mcgreedysecretc2.thm/reg`
+
+
  
 
 
