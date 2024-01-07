@@ -352,6 +352,20 @@ we just need to go to the main Program, and we can find the first URL used by th
 
 Thus, the first URL is `http://mcgreedysecretc2.thm/reg`
 
+The next question too can be solved w ith referewnce to the main Program. 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/7103e7fe-bfa6-4c83-9d08-e3be1506a49f)
+
+The Sleeper function is used to put the malware program to sleep for 15000 milliseconds or `15` seconds.
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/24e55741-c81a-4d38-af80-d8d92c72f80c)
+
+For the next question,
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/0bdeb12d-5748-4744-81ee-cdc149fcfbe0)
+
+If we just see the same main Program, 
+
+
+
 
  
 
