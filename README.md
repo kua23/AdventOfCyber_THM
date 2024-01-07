@@ -362,7 +362,36 @@ For the next question,
 
 ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/0bdeb12d-5748-4744-81ee-cdc149fcfbe0)
 
-If we just see the same main Program, 
+If we just see the same main Program, we can go to the if `shell` condition and see the code related to it.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/52fcab6c-489f-42eb-bfd4-db9c3ce10b05)
+
+The code related to this is
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/d371b6f2-e138-4807-a9f3-709e0a4f501a) which as one can observe has a function called 'ExecuteCommand' to execute `cmd.exe`
+
+Thus, the C2 command used to executed commands via cmd.exe is `shell`
+
+For the last question,
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/73ff25df-75f9-4258-8fb2-a44c89938743)
+
+To figure this out, if we go into the Implant function, we can see that it has called a 'string url' in the main Program. 
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/4123afce-a1c8-4bec-9c72-8b8b3ce959b2)
+Thus, in order to find out the domain, if we go to the main program, where the Implant function is called, we can see the url `http://stash.mcgreedy.thm/spykit.exe`. However, as we are only looking for the domain, we know that the asnwer is just `stash.mcgreedy.thm`
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/8502a003-99f0-4823-b092-a532cb09cea2)
+
+
+#  10. Inject the Halls with EXEC Queries
+
+
+
+
+
+
+
+
+
+
 
 
 
