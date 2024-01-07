@@ -318,7 +318,24 @@ whose answer is `39f2dea6ffb43bf80d80f19d122076b3682773c2`
 
 ## 9. She sells C# shells by the C2shore
 
-This challenge is basically based on reverse engineering the malware in order to obtain the solution. 
+This challenge is basically based on reverse engineering the malware in order to obtain the solution. This is based on the .NET framework, which is sort of an intermediate between the high level C# language and the low level binary and assembly code. It is a Common Language Runtime which understands both of this.Thus it is easier to understand the malware, as it is written in source code and can be analysed at a level which is simpler to that of the assembly language. It also gives a basic foundation on C2 architecture which is basically Command and Control, in order to take control over the host's pc.
+
+Thus coming to the questions, for the first one
+
+ ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/aa6120e4-e3a6-4507-9fe9-e833d6a765f7)
+
+ If we navigate to the PostIt method, we do find the user agent which the malware used to connect to the C2 server.
+
+ ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/3802d921-fc98-44a3-9df3-cda075a7fbf9)
+ Thus, the User Agent is given by `Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15`
+
+ For the next question,
+
+ ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/4ec2348b-4fc4-4651-9180-c9544b8e1b30)
+ 
+
+
+
 
 
 
