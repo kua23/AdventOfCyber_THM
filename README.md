@@ -318,6 +318,7 @@ whose answer is `39f2dea6ffb43bf80d80f19d122076b3682773c2`
 
 ## 9. She sells C# shells by the C2shore
 
+This challenge is basically based on reverse engineering the malware in order to obtain the solution. 
 
 
 
