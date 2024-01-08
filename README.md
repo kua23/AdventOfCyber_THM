@@ -383,6 +383,42 @@ Thus, in order to find out the domain, if we go to the main program, where the I
 
 #  10. Inject the Halls with EXEC Queries
 
+This challenge is based on SQL databases and on injecting code into the websites in order to change the content of websites. It is known as SQL injection. By doing so, a query is injected into the websites command line and is executed in order to hack it. 
+
+Thus, after following the tutorial, for the first question,
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/69d1e94e-9dad-4614-a62e-b5797727de95), we can do the following
+
+First, navigate to the gift search part of the website
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/96f6e15b-e163-46bc-b246-0175a4206f09)
+
+After that, if we look at the URL, we get the answer
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/60804031-9a92-43db-b05a-e825d85f320f)
+The first webpage we come across is therefore, `/giftsearch.php`
+
+
+For the next question, we need to find the name of the ODBC driver when the error message is displayed. Thus, if we just remove everything following `age=` and then write the SQL query as shown below but then remove the `--` at the end, it returns an error message which displays the name of the ODBC driver.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/6f9aba9e-1139-4a98-a75a-c07bc54b6a71)
+
+THus the ODBC driver is `ODBC Driver 17 for SQL Server`
+
+
+For the next question, we need to run the SQL injection in the URL of the website. Thus, we give a dummy input to the 'Age', 'Interests' and 'Budget' fields and then click 'SEARCH'.
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/62db9a20-11af-44f6-9575-4ad654859ee4)
+
+Then, we go to the URL, and remove everything following the `age=`, and instead then type `' OR 1=1 --`, which then leads to the website displaying all the data from the SQL database.
+Here, we type the `'` to give a null input to the `age condition` and instead type `1=1` which always returns as true. `--`, then ignores the rest of the URL and hence returns all the data of the database. 
+If we now scroll to the bottom of the website, we get the flag for the question that is: `THM{a4ffc901c27fb89efe3c31642ece4447}`
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/ae778207-418d-4014-bb1e-0296f23b7c10)
+
+
+For the next part of the question, 
+In order to find the notefile, we need to first get into the host system. In order to do this
+
 
 
 
